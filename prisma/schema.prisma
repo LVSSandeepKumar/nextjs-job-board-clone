@@ -26,7 +26,7 @@ model Job {
   salary           Int
   companyName      String
   applicationEmail String?
-  applicationUrl   String?
+  applicationURL   String?
   companyLogoUrl   String?
   approved         Boolean  @default(false)
   createdAt        DateTime @default(now())
