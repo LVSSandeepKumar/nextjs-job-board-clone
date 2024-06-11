@@ -19,7 +19,7 @@ export async function createJobPosting(formData: FormData) {
     locationType,
     location,
     applicationEmail,
-    applicationURL,
+    applicationUrl,
     salary,
     description,
   } = createJobSchema.parse(values);
@@ -51,7 +51,7 @@ export async function createJobPosting(formData: FormData) {
       locationType,
       location,
       applicationEmail : applicationEmail?.trim(),
-      applicationUrl : applicationURL?.trim(),
+      applicationUrl : applicationUrl?.trim(),
       description : description?.trim(),
       salary : parseInt(salary),
     },

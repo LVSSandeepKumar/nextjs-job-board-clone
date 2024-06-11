@@ -17,9 +17,9 @@ const companyLogoSchema = z
 const applicationSchema = z
   .object({
     applicationEmail: z.string().max(100).email().optional().or(z.literal("")),
-    applicationURL: z.string().max(100).url().optional().or(z.literal("")),
+    applicationUrl: z.string().max(100).url().optional().or(z.literal("")),
   })
-  .refine((data) => data.applicationEmail || data.applicationURL, {
+  .refine((data) => data.applicationEmail || data.applicationUrl, {
     message: "Email or URL required",
     path: ["applicationEmail"],
   });
